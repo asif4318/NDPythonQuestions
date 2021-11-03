@@ -2,8 +2,8 @@ import math
 import matplotlib.pyplot as plt
 
 years = int(input('Enter the number of years: '))
-rate = float(input('Enter the annual interest rate(%): '))/100
-initial_balance = float(input('Enter initial balance($): '))
+rate = float(input('Enter the annual interest rate(%) : '))/100
+initial_balance = float(input('Enter initial balance($) : '))
 
 compound_rate_each_year = []
 for year in range(years):
@@ -29,6 +29,9 @@ for year in range(0, years):
     balance_each_year.append(balance)
 
 # your 3 data sets to plot: balance_each_year, cumulative_interest_each_year, interest_earned_each_year
+# bo- means blue with dots and a solid line
+# g means green line
+# r-- means red dashed line
 plt.plot(balance_each_year, 'bo-', label="Balance")
 plt.plot(interest_earned_each_year,'g', label = "Interest")
 plt.plot(cumulative_interest_each_year, 'r--', label="Cumulative Interest")
